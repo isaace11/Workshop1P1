@@ -11,7 +11,11 @@ def home(request):
     else:
         movies = Movie.objects.all()
 
-    return render(request, 'home.html', {'searchTerm': searchTerm, 'movies': movies})
+    return render(request, 'home.html', {
+        'name': 'Isabel Acevedo',
+        'searchTerm': searchTerm,
+        'movies': movies
+    })
 
 
 def about(request):
